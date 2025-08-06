@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<style>
+    ul li a:hover {
+        background-color: rgb(108, 108, 241);
+        border-radius: 3px;
+    }
+</style>
+
+<body>
+
+    <h1 class="text-warning m-2">Shopping Cart <span><img src="icons8-shopaholic-94.png" width="35" alt=""></span></h1>
+
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Log In.html">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="sign up.html">Sign Up</a>
+                    </li>
+                </ul>
+                <img src="icons8-shopping-cart-48.png" alt="" width="25">&nbsp;&nbsp;
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="bg-primary-subtle">
+        <h1 class="text-center py-5">Sign Up</h1>
+
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">User name</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                </div>
+                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="number">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="checkbox">
+                    <label class="form-check-label" for="exampleCheck1">I agree</label>
+                </div>
+                <button onclick="test()" type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+        </div>
+
+        <script>
+            function test() {
+                var a = document.getElementById('username').value.trim(); 
+                var b = document.getElementById('name').value.trim();
+                var c = document.getElementById('email').value.trim();
+                var d = document.getElementById('number').value.trim();
+                var e = document.getElementById('checkbox');
+
+                if (a == "" || b == "" || c == "" || d == "" || !e.checked) {
+                    window.alert('invalid format')
+                } else {
+                    window.alert('success format')
+                }
+            }
+
+
+
+        </script>
+
+
+
+
+
+        <footer class="container-fluid mt-5 bg-warning d-flex justify-content-between align-items-center py-2">
+            <span class="text-light fw-bold">Al Rights Reserved &copy; Shop</span>
+            <div>
+                <button type="button" class="btn btn-outline-warning  rounded-circle">
+                    <img src="icons8-google-48.png" alt="" width="25" height="25">
+                </button>
+                <button type="button" class="btn btn-outline-warning  rounded-circle">
+                    <img src="icons8-google-48.png" alt="" width="25" height="25">
+                </button>
+                <button type="button" class="btn btn-outline-warning  rounded-circle">
+                    <img src="icons8-google-48.png" alt="" width="25" height="25">
+                </button>
+                <button type="button" class="btn btn-outline-warning  rounded-circle">
+                    <img src="icons8-google-48.png" alt="" width="25" height="25">
+                </button>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
